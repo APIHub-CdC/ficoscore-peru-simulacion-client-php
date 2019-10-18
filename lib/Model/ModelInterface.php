@@ -7,9 +7,9 @@ interface ModelInterface
     
     public function getModelName();
     
-    public static function swaggerTypes();
+    public static function apihubTypes();
     
-    public static function swaggerFormats();
+    public static function apihubFormats();
     
     public static function attributeMap();
     
