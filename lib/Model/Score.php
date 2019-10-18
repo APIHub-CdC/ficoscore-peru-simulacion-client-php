@@ -8,9 +8,9 @@ use \FicoscorePeruSandbox\Client\ObjectSerializer;
 class Score implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
-    
+
     protected static $apihubModelName = 'Score';
-    
+
     protected static $apihubTypes = [
         'folio_consulta_otorgante' => 'string',
         'num_consulta' => 'float',
@@ -18,10 +18,10 @@ class Score implements ModelInterface, ArrayAccess
         'score' => 'float',
         'reason_code1' => 'string',
         'reason_code2' => 'string',
-        'reason_code3' => 'float',
+        'reason_code3' => 'string',
         'reason_code4' => 'string'
     ];
-    
+
     protected static $apihubFormats = [
         'folio_consulta_otorgante' => null,
         'num_consulta' => null,
@@ -32,17 +32,17 @@ class Score implements ModelInterface, ArrayAccess
         'reason_code3' => null,
         'reason_code4' => null
     ];
-    
-    public static function swaggerTypes()
+
+    public static function apihubTypes()
     {
         return self::$apihubTypes;
     }
-    
-    public static function swaggerFormats()
+
+    public static function apihubFormats()
     {
         return self::$apihubFormats;
     }
-    
+
     protected static $attributeMap = [
         'folio_consulta_otorgante' => 'folioConsultaOtorgante',
         'num_consulta' => 'numConsulta',
@@ -53,7 +53,7 @@ class Score implements ModelInterface, ArrayAccess
         'reason_code3' => 'reasonCode3',
         'reason_code4' => 'reasonCode4'
     ];
-    
+
     protected static $setters = [
         'folio_consulta_otorgante' => 'setFolioConsultaOtorgante',
         'num_consulta' => 'setNumConsulta',
@@ -64,7 +64,7 @@ class Score implements ModelInterface, ArrayAccess
         'reason_code3' => 'setReasonCode3',
         'reason_code4' => 'setReasonCode4'
     ];
-    
+
     protected static $getters = [
         'folio_consulta_otorgante' => 'getFolioConsultaOtorgante',
         'num_consulta' => 'getNumConsulta',
@@ -75,26 +75,27 @@ class Score implements ModelInterface, ArrayAccess
         'reason_code3' => 'getReasonCode3',
         'reason_code4' => 'getReasonCode4'
     ];
-    
+
     public static function attributeMap()
     {
         return self::$attributeMap;
     }
-    
+
     public static function setters()
     {
         return self::$setters;
     }
-    
+
     public static function getters()
     {
         return self::$getters;
     }
-    
+
     public function getModelName()
     {
         return self::$apihubModelName;
     }
+
     const REASON_CODE1_A1 = 'A1';
     const REASON_CODE1_A3 = 'A3';
     const REASON_CODE1_C1 = 'C1';
@@ -167,6 +168,42 @@ class Score implements ModelInterface, ArrayAccess
     const REASON_CODE2_U7 = 'U7';
     const REASON_CODE2_V3 = 'V3';
     const REASON_CODE2_Z3 = 'Z3';
+    const REASON_CODE3_A1 = 'A1';
+    const REASON_CODE3_A3 = 'A3';
+    const REASON_CODE3_C1 = 'C1';
+    const REASON_CODE3_C2 = 'C2';
+    const REASON_CODE3_C4 = 'C4';
+    const REASON_CODE3_C6 = 'C6';
+    const REASON_CODE3_C7 = 'C7';
+    const REASON_CODE3_D2 = 'D2';
+    const REASON_CODE3_D8 = 'D8';
+    const REASON_CODE3_E0 = 'E0';
+    const REASON_CODE3_E1 = 'E1';
+    const REASON_CODE3_E4 = 'E4';
+    const REASON_CODE3_F1 = 'F1';
+    const REASON_CODE3_F7 = 'F7';
+    const REASON_CODE3_F8 = 'F8';
+    const REASON_CODE3_G1 = 'G1';
+    const REASON_CODE3_G2 = 'G2';
+    const REASON_CODE3_J0 = 'J0';
+    const REASON_CODE3_K0 = 'K0';
+    const REASON_CODE3_K2 = 'K2';
+    const REASON_CODE3_M1 = 'M1';
+    const REASON_CODE3_M5 = 'M5';
+    const REASON_CODE3_N3 = 'N3';
+    const REASON_CODE3_P6 = 'P6';
+    const REASON_CODE3_P9 = 'P9';
+    const REASON_CODE3_Q0 = 'Q0';
+    const REASON_CODE3_R0 = 'R0';
+    const REASON_CODE3_R2 = 'R2';
+    const REASON_CODE3_R3 = 'R3';
+    const REASON_CODE3_SC = 'SC';
+    const REASON_CODE3_T0 = 'T0';
+    const REASON_CODE3_T1 = 'T1';
+    const REASON_CODE3_T4 = 'T4';
+    const REASON_CODE3_U7 = 'U7';
+    const REASON_CODE3_V3 = 'V3';
+    const REASON_CODE3_Z3 = 'Z3';
     const REASON_CODE4_A1 = 'A1';
     const REASON_CODE4_A3 = 'A3';
     const REASON_CODE4_C1 = 'C1';
@@ -203,8 +240,6 @@ class Score implements ModelInterface, ArrayAccess
     const REASON_CODE4_U7 = 'U7';
     const REASON_CODE4_V3 = 'V3';
     const REASON_CODE4_Z3 = 'Z3';
-    
-    
     
     public function getReasonCode1AllowableValues()
     {
@@ -248,7 +283,6 @@ class Score implements ModelInterface, ArrayAccess
         ];
     }
     
-    
     public function getReasonCode2AllowableValues()
     {
         return [
@@ -290,7 +324,48 @@ class Score implements ModelInterface, ArrayAccess
             self::REASON_CODE2_Z3,
         ];
     }
-    
+
+    public function getReasonCode3AllowableValues()
+    {
+        return [
+            self::REASON_CODE3_A1,
+            self::REASON_CODE3_A3,
+            self::REASON_CODE3_C1,
+            self::REASON_CODE3_C2,
+            self::REASON_CODE3_C4,
+            self::REASON_CODE3_C6,
+            self::REASON_CODE3_C7,
+            self::REASON_CODE3_D2,
+            self::REASON_CODE3_D8,
+            self::REASON_CODE3_E0,
+            self::REASON_CODE3_E1,
+            self::REASON_CODE3_E4,
+            self::REASON_CODE3_F1,
+            self::REASON_CODE3_F7,
+            self::REASON_CODE3_F8,
+            self::REASON_CODE3_G1,
+            self::REASON_CODE3_G2,
+            self::REASON_CODE3_J0,
+            self::REASON_CODE3_K0,
+            self::REASON_CODE3_K2,
+            self::REASON_CODE3_M1,
+            self::REASON_CODE3_M5,
+            self::REASON_CODE3_N3,
+            self::REASON_CODE3_P6,
+            self::REASON_CODE3_P9,
+            self::REASON_CODE3_Q0,
+            self::REASON_CODE3_R0,
+            self::REASON_CODE3_R2,
+            self::REASON_CODE3_R3,
+            self::REASON_CODE3_SC,
+            self::REASON_CODE3_T0,
+            self::REASON_CODE3_T1,
+            self::REASON_CODE3_T4,
+            self::REASON_CODE3_U7,
+            self::REASON_CODE3_V3,
+            self::REASON_CODE3_Z3,
+        ];
+    }
     
     public function getReasonCode4AllowableValues()
     {
@@ -334,9 +409,8 @@ class Score implements ModelInterface, ArrayAccess
         ];
     }
     
-    
     protected $container = [];
-    
+
     public function __construct(array $data = null)
     {
         $this->container['folio_consulta_otorgante'] = isset($data['folio_consulta_otorgante']) ? $data['folio_consulta_otorgante'] : null;
@@ -348,10 +422,11 @@ class Score implements ModelInterface, ArrayAccess
         $this->container['reason_code3'] = isset($data['reason_code3']) ? $data['reason_code3'] : null;
         $this->container['reason_code4'] = isset($data['reason_code4']) ? $data['reason_code4'] : null;
     }
-    
+
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
         $allowedValues = $this->getReasonCode1AllowableValues();
         if (!is_null($this->container['reason_code1']) && !in_array($this->container['reason_code1'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -359,6 +434,7 @@ class Score implements ModelInterface, ArrayAccess
                 implode("', '", $allowedValues)
             );
         }
+
         $allowedValues = $this->getReasonCode2AllowableValues();
         if (!is_null($this->container['reason_code2']) && !in_array($this->container['reason_code2'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -366,6 +442,15 @@ class Score implements ModelInterface, ArrayAccess
                 implode("', '", $allowedValues)
             );
         }
+
+        $allowedValues = $this->getReasonCode3AllowableValues();
+        if (!is_null($this->container['reason_code3']) && !in_array($this->container['reason_code3'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'reason_code3', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         $allowedValues = $this->getReasonCode4AllowableValues();
         if (!is_null($this->container['reason_code4']) && !in_array($this->container['reason_code4'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -373,63 +458,68 @@ class Score implements ModelInterface, ArrayAccess
                 implode("', '", $allowedValues)
             );
         }
+
         return $invalidProperties;
     }
-    
+
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
     }
-    
+
     public function getFolioConsultaOtorgante()
     {
         return $this->container['folio_consulta_otorgante'];
     }
-    
+
     public function setFolioConsultaOtorgante($folio_consulta_otorgante)
     {
         $this->container['folio_consulta_otorgante'] = $folio_consulta_otorgante;
+
         return $this;
     }
-    
+
     public function getNumConsulta()
     {
         return $this->container['num_consulta'];
     }
-    
+
     public function setNumConsulta($num_consulta)
     {
         $this->container['num_consulta'] = $num_consulta;
+
         return $this;
     }
-    
+
     public function getNombreScore()
     {
         return $this->container['nombre_score'];
     }
-    
+
     public function setNombreScore($nombre_score)
     {
         $this->container['nombre_score'] = $nombre_score;
+
         return $this;
     }
-    
+
     public function getScore()
     {
         return $this->container['score'];
     }
-    
+
     public function setScore($score)
     {
         $this->container['score'] = $score;
+
         return $this;
     }
-    
+
     public function getReasonCode1()
     {
         return $this->container['reason_code1'];
     }
-    
+
     public function setReasonCode1($reason_code1)
     {
         $allowedValues = $this->getReasonCode1AllowableValues();
@@ -442,14 +532,15 @@ class Score implements ModelInterface, ArrayAccess
             );
         }
         $this->container['reason_code1'] = $reason_code1;
+
         return $this;
     }
-    
+
     public function getReasonCode2()
     {
         return $this->container['reason_code2'];
     }
-    
+
     public function setReasonCode2($reason_code2)
     {
         $allowedValues = $this->getReasonCode2AllowableValues();
@@ -462,25 +553,36 @@ class Score implements ModelInterface, ArrayAccess
             );
         }
         $this->container['reason_code2'] = $reason_code2;
+
         return $this;
     }
-    
+
     public function getReasonCode3()
     {
         return $this->container['reason_code3'];
     }
-    
+
     public function setReasonCode3($reason_code3)
     {
+        $allowedValues = $this->getReasonCode3AllowableValues();
+        if (!is_null($reason_code3) && !in_array($reason_code3, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'reason_code3', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['reason_code3'] = $reason_code3;
+
         return $this;
     }
-    
+
     public function getReasonCode4()
     {
         return $this->container['reason_code4'];
     }
-    
+
     public function setReasonCode4($reason_code4)
     {
         $allowedValues = $this->getReasonCode4AllowableValues();
@@ -493,19 +595,20 @@ class Score implements ModelInterface, ArrayAccess
             );
         }
         $this->container['reason_code4'] = $reason_code4;
+
         return $this;
     }
-    
+
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
     }
-    
+
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
-    
+
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -514,20 +617,23 @@ class Score implements ModelInterface, ArrayAccess
             $this->container[$offset] = $value;
         }
     }
-    
+
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
     }
-    
+
     public function __toString()
     {
-        if (defined('JSON_PRETTY_PRINT')) {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
             return json_encode(
                 ObjectSerializer::sanitizeForSerialization($this),
                 JSON_PRETTY_PRINT
             );
         }
+
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

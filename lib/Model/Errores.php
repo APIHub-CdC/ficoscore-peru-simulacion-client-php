@@ -19,12 +19,12 @@ class Errores implements ModelInterface, ArrayAccess
         'errores' => null
     ];
     
-    public static function swaggerTypes()
+    public static function apihubTypes()
     {
         return self::$apihubTypes;
     }
     
-    public static function swaggerFormats()
+    public static function apihubFormats()
     {
         return self::$apihubFormats;
     }
