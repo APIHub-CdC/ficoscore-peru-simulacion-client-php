@@ -1,4 +1,4 @@
-# ficoscore-pero-simulacion-client-php
+# ficoscore-peru-simulacion-client-php
 
 Devuelve una calificación de acuerdo a los datos financieros basada en el modelo de FICO Score.
 
